@@ -5,10 +5,15 @@
  */
 package org.java;
 
-/**
- *
- * @author mauricio
- */
+import java.util.ArrayList;
+import java.util.List;
+import API.jar;
+
 public class UsuarioData {
+   
+    
+ //en login controller le ponemos    private List<UsuarioData> listaUsuarios = new ArrayList<UsuarioData>;
+    
+    
     
 }
