@@ -9,6 +9,16 @@ package org;
  *
  * @author Li
  */
+import entidades.Cliente;
+import servicios.ServicioCliente;
+
 public class ControllerCliente {
-    
+
+    ServicioCliente servicioCliente = new ServicioCliente();
+    Cliente cliente = new Cliente();
+
+    public boolean insertarCliente() {
+        servicioCliente.insert(cliente);
+        return false;
+    }
 }

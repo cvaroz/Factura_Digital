@@ -9,6 +9,12 @@ package org;
  *
  * @author Li
  */
+import servicios.ServicioEmpresa;
+import entidades.Empresa;
 public class ControllerEmpresa {
+    ServicioEmpresa servicioEmpresa = new ServicioEmpresa();
     
+    public void insertarEmpresa(Empresa e){
+        
+    }
 }
