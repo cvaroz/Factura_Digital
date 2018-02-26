@@ -7,7 +7,6 @@ package org.java;
 
 import java.util.ArrayList;
 import java.util.List;
-import API.jar;
 
 public class UsuarioData {
    
