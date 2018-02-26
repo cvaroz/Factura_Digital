@@ -11,10 +11,13 @@
                     <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
                 <library dirs="200">
+<<<<<<< HEAD
                     <file>${file.reference.javax.mail.jar}</file>
                     <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
                 <library dirs="200">
+=======
+>>>>>>> b45105451861af8e965e329a1d1709229e4dd77a
                     <file>${file.reference.API.jar}</file>
                     <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
