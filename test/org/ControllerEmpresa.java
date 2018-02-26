@@ -9,17 +9,30 @@ package org;
  *
  * @author Li
  */
-<<<<<<< HEAD
 import servicios.ServicioEmpresa;
 import entidades.Empresa;
+
 public class ControllerEmpresa {
+
     ServicioEmpresa servicioEmpresa = new ServicioEmpresa();
-    
-    public void insertarEmpresa(Empresa e){
-        
+
+    public boolean insertarEmpresa(Empresa e) {
+        if (e != null) {
+            return false;
+        } else {
+            return servicioEmpresa.modify(e) != false;
+        }
     }
-=======
-public class ControllerEmpresa {
-    
->>>>>>> f0f9af6771d8933691cd676ec3634e76eb8acd93
+
+    public boolean modificarEmpresa(Empresa e) {
+        if (e != null) {
+            return servicioEmpresa.modify(e) != false;
+        } else {
+            return false;
+        }
+    }
+
+    public Empresa leerEmpresa(Empresa e) {
+        return servicioEmpresa.read(e);
+    }
 }

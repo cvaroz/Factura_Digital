@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -16,38 +16,23 @@ import servicios.ServicioCliente;
 public class ControllerCliente {
 
     ServicioCliente servicioCliente = new ServicioCliente();
-    Cliente cliente = new Cliente();
 
-    public boolean insertarCliente() {
-        servicioCliente.insert(cliente);
-        return false;
+    public boolean insertarCliente(Cliente c) {
+        if (c != null) {
+            return false;
+        } else {
+            return servicioCliente.insert(c)!=false;
+        }
     }
-}
-=======
-package org;
 
-
-import servicios.ServicioCliente;
-import entidades.Cliente;
-
-public class ControllerCliente {
-    
-    
-    Cliente c1 = new Cliente();
-    ServicioCliente serviceC = new ServicioCliente(); 
-    
-   
-       
-    
-    public void crearCliente(Cliente cliente){
-    
-        
-        
-        serviceC.insert(cliente);
-    
-    
+    public boolean modificarCliente(Cliente c) {
+        if(c != null){
+            return servicioCliente.modify(c)!=false;
+        }else
+            return false;
     }
     
+    public Cliente leerCliente(Cliente c){
+        return servicioCliente.read(c);
+    }
 }
-
->>>>>>> f0f9af6771d8933691cd676ec3634e76eb8acd93

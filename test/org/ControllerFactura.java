@@ -5,10 +5,34 @@
  */
 package org;
 
+import entidades.Factura;
+import servicios.ServicioFactura;
+
+
 /**
  *
  * @author Li
  */
 public class ControllerFactura {
-    
+    ServicioFactura servicioFactura = new ServicioFactura();
+
+    public boolean insertarFactura(Factura f) {
+        if (f != null) {
+            return false;
+        } else {
+            return servicioFactura.modify(f)!=false;
+        }
+    }
+
+    public boolean modificarFactura(Factura f) {
+        if (f != null) {
+            return servicioFactura.modify(f)!=false;
+        } else {
+            return false;
+        }
+    }
+
+    public Factura leerFactura(Factura f) {
+        return servicioFactura.read(f);
+    }
 }

@@ -5,10 +5,36 @@
  */
 package org;
 
+import entidades.Usuario;
+import servicios.ServicioUsuario;
+
 /**
  *
  * @author Li
  */
 public class ControllerUsuario {
-    
+    ServicioUsuario servicioUsuario = new ServicioUsuario();
+
+    public boolean insertarRecibo(Usuario u) {
+        if (u != null) {
+            return false;
+        } else {
+            return servicioUsuario.modify(u)!=false;
+        }
+    }
+
+    public boolean modificarRecibo(Usuario u) {
+        if (u != null) {
+            return servicioUsuario.modify(u)!=false;
+        } else {
+            return false;
+        }
+    }
+
+    public Usuario leerRecibo(Usuario u) {
+        if (u != null) {
+            return servicioUsuario.read(u);
+        }else 
+            return null;
+    }
 }
