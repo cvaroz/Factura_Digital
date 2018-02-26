@@ -9,6 +9,7 @@ package org;
  *
  * @author Li
  */
+<<<<<<< HEAD
 import servicios.ServicioEmpresa;
 import entidades.Empresa;
 public class ControllerEmpresa {
@@ -17,4 +18,8 @@ public class ControllerEmpresa {
     public void insertarEmpresa(Empresa e){
         
     }
+=======
+public class ControllerEmpresa {
+    
+>>>>>>> f0f9af6771d8933691cd676ec3634e76eb8acd93
 }

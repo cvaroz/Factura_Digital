@@ -3,6 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/Jaime/Documents/NetBeansProjects/Proyecto%203/Factura_Digital/test/entidades/Empresa.java</file>
             <file>file:/C:/Users/Jaime/Documents/NetBeansProjects/Proyecto%203/Factura_Digital/test/org/ControllerEmpresa.java</file>
             <file>file:/C:/Users/Jaime/Documents/NetBeansProjects/Proyecto%203/Factura_Digital/test/entidades/Recibo.java</file>
@@ -28,6 +29,24 @@
             <file>file:/C:/Users/Jaime/Documents/NetBeansProjects/Proyecto%203/Factura_Digital/test/entidades/Rol.java</file>
             <file>file:/C:/Users/Jaime/Documents/NetBeansProjects/Proyecto%203/Factura_Digital/test/entidades/Factura.java</file>
             <file>file:/C:/Users/Jaime/Documents/NetBeansProjects/Proyecto%203/Factura_Digital/test/entidades/Usuario.java</file>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <file>file:/C:/Users/mauricio/Documents/NetBeansProjects/Factura_Electronica/src/java/org/java/EnvioCorreos.java</file>
+            <file>file:/C:/Users/mauricio/Documents/NetBeansProjects/Factura_Electronica/src/java/org/java/UsuarioData.java</file>
+            <file>file:/C:/Users/mauricio/Documents/NetBeansProjects/Factura_Electronica/web/index.xhtml</file>
+=======
+            <file>file:/Users/fed14/Documents/Factura_Electronica/Factura_Digital/web/register.xhtml</file>
+            <file>file:/Users/fed14/Documents/Factura_Electronica/Factura_Digital/web/index.xhtml</file>
+            <file>file:/Users/fed14/Documents/Factura_Electronica/Factura_Digital/web/homePage.xhtml</file>
+            <file>file:/Users/fed14/Documents/Factura_Electronica/Factura_Digital/web/facturaCRUD.xhtml</file>
+>>>>>>> 55a9de1cd9782fa0c477c0a69456b9da33d04517
+=======
+            <file>file:/C:/Users/mauricio/Documents/NetBeansProjects/Factura_Electronica/web/test/entidadesx/Cliente.java</file>
+            <file>file:/C:/Users/mauricio/Documents/NetBeansProjects/Factura_Electronica/web/index.xhtml</file>
+            <file>file:/C:/Users/mauricio/Documents/NetBeansProjects/Factura_Electronica/web/test/org/ControllerCliente.java</file>
+>>>>>>> b45105451861af8e965e329a1d1709229e4dd77a
+>>>>>>> f0f9af6771d8933691cd676ec3634e76eb8acd93
         </group>
     </open-files>
 </project-private>

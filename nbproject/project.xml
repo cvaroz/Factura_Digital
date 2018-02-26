@@ -14,6 +14,21 @@
                     <file>${file.reference.API.jar}</file>
                     <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
+<<<<<<< HEAD
+=======
+                <library dirs="200">
+                    <file>${libs.JAVAMAIL.classpath}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
+                    <file>${libs.CONECTORSQL.classpath}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
+                    <file>${libs.HIBERNATE.classpath}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+>>>>>>> f0f9af6771d8933691cd676ec3634e76eb8acd93
             </web-module-libraries>
             <web-module-additional-libraries/>
             <source-roots>
@@ -23,5 +38,6 @@
                 <root id="test.src.dir"/>
             </test-roots>
         </data>
+        <libraries xmlns="http://www.netbeans.org/ns/cdnjs-libraries/1"/>
     </configuration>
 </project>
