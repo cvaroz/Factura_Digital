@@ -15,7 +15,7 @@ import servicios.ServicioProducto;
 public class ControllerProducto {
     ServicioProducto servicioProducto = new ServicioProducto();
 
-    public boolean insertarProducto(Producto p) {
+    public boolean insertarProducto(Producto p) throws Exception {
         if (p != null) {
             return false;
         } else {
@@ -23,7 +23,7 @@ public class ControllerProducto {
         }
     }
 
-    public boolean modificarProducto(Producto p) {
+    public boolean modificarProducto(Producto p) throws Exception {
         if (p != null) {
             return servicioProducto.modify(p)!=false;
         } else {
@@ -31,7 +31,7 @@ public class ControllerProducto {
         }
     }
 
-    public Producto leerProducto(Producto p) {
+    public Producto leerProducto(Producto p) throws Exception {
         if (p != null) {
             return servicioProducto.read(p);
         }else 

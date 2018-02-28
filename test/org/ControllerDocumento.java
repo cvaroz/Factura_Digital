@@ -15,7 +15,7 @@ import servicios.ServicioDocumento;
 public class ControllerDocumento {
     ServicioDocumento servicioDocumento = new ServicioDocumento();
 
-    public boolean insertarDocumento(Documento d) {
+    public boolean insertarDocumento(Documento d) throws Exception {
         if (d != null) {
             return false;
         } else {
@@ -23,14 +23,14 @@ public class ControllerDocumento {
         }
     }
 
-    public boolean modificarDocumento(Documento d) {
+    public boolean modificarDocumento(Documento d) throws Exception {
         if(d != null){
             return servicioDocumento.modify(d)!=false;
         }else
             return false;
     }
     
-    public Documento leerDocumento(Documento d){
+    public Documento leerDocumento(Documento d) throws Exception{
         return servicioDocumento.read(d);
     }
 }

@@ -15,7 +15,7 @@ import servicios.ServicioRecibo;
 public class ControllerRecibo {
     ServicioRecibo servicioRecibo = new ServicioRecibo();
 
-    public boolean insertarRecibo(Recibo r) {
+    public boolean insertarRecibo(Recibo r) throws Exception {
         if (r != null) {
             return false;
         } else {
@@ -23,7 +23,7 @@ public class ControllerRecibo {
         }
     }
 
-    public boolean modificarRecibo(Recibo r) {
+    public boolean modificarRecibo(Recibo r) throws Exception {
         if (r != null) {
             return servicioRecibo.modify(r)!=false;
         } else {
@@ -31,7 +31,7 @@ public class ControllerRecibo {
         }
     }
 
-    public Recibo leerRecibo(Recibo r) {
+    public Recibo leerRecibo(Recibo r) throws Exception {
         if (r != null) {
             return servicioRecibo.read(r);
         }else 

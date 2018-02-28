@@ -15,7 +15,7 @@ import servicios.ServicioUsuario;
 public class ControllerUsuario {
     ServicioUsuario servicioUsuario = new ServicioUsuario();
 
-    public boolean insertarRecibo(Usuario u) {
+    public boolean insertarRecibo(Usuario u) throws Exception {
         if (u != null) {
             return false;
         } else {
@@ -23,7 +23,7 @@ public class ControllerUsuario {
         }
     }
 
-    public boolean modificarRecibo(Usuario u) {
+    public boolean modificarRecibo(Usuario u) throws Exception {
         if (u != null) {
             return servicioUsuario.modify(u)!=false;
         } else {
@@ -31,7 +31,7 @@ public class ControllerUsuario {
         }
     }
 
-    public Usuario leerRecibo(Usuario u) {
+    public Usuario leerRecibo(Usuario u) throws Exception {
         if (u != null) {
             return servicioUsuario.read(u);
         }else 

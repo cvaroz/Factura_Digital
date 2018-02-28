@@ -17,7 +17,7 @@ public class ControllerCliente {
 
     ServicioCliente servicioCliente = new ServicioCliente();
 
-    public boolean insertarCliente(Cliente c) {
+    public boolean insertarCliente(Cliente c) throws Exception {
         if (c != null) {
             return false;
         } else {
@@ -25,14 +25,14 @@ public class ControllerCliente {
         }
     }
 
-    public boolean modificarCliente(Cliente c) {
+    public boolean modificarCliente(Cliente c) throws Exception {
         if(c != null){
             return servicioCliente.modify(c)!=false;
         }else
             return false;
     }
     
-    public Cliente leerCliente(Cliente c){
+    public Cliente leerCliente(Cliente c) throws Exception{
         return servicioCliente.read(c);
     }
 }

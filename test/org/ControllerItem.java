@@ -16,7 +16,7 @@ public class ControllerItem {
 
     ServicioItem servicioItem = new ServicioItem();
 
-    public boolean insertarItem(Item i) {
+    public boolean insertarItem(Item i) throws Exception {
         if (i != null) {
             return false;
         } else {
@@ -24,7 +24,7 @@ public class ControllerItem {
         }
     }
 
-    public boolean modificarItem(Item i) {
+    public boolean modificarItem(Item i) throws Exception {
         if (i != null) {
             return servicioItem.modify(i)!=false;
         } else {
@@ -32,7 +32,7 @@ public class ControllerItem {
         }
     }
 
-    public Item leerItem(Item i) {
+    public Item leerItem(Item i) throws Exception {
         if(i!=null){
                 return servicioItem.read(i);
             }else 

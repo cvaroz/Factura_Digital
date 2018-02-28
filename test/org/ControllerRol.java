@@ -15,7 +15,7 @@ import servicios.ServicioRol;
 public class ControllerRol {
     ServicioRol servicioRol = new ServicioRol();
 
-    public boolean insertarRol(Rol r) {
+    public boolean insertarRol(Rol r) throws Exception {
         if (r != null) {
             return false;
         } else {
@@ -23,7 +23,7 @@ public class ControllerRol {
         }
     }
 
-    public boolean modificarRol(Rol r) {
+    public boolean modificarRol(Rol r) throws Exception {
         if (r != null) {
             return servicioRol.modify(r)!=false;
         } else {
@@ -31,14 +31,14 @@ public class ControllerRol {
         }
     }
 
-    public Rol leerRol(Rol r) {
+    public Rol leerRol(Rol r) throws Exception {
         if (r != null) {
             return servicioRol.read(r);
         }else 
             return null;
     }
     
-    public boolean eliminarRol(Rol r){
+    public boolean eliminarRol(Rol r) throws Exception{
         if(r != null) {
             servicioRol.delete(r);
             return true;

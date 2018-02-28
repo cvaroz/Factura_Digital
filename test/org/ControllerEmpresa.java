@@ -16,7 +16,7 @@ public class ControllerEmpresa {
 
     ServicioEmpresa servicioEmpresa = new ServicioEmpresa();
 
-    public boolean insertarEmpresa(Empresa e) {
+    public boolean insertarEmpresa(Empresa e) throws Exception {
         if (e != null) {
             return false;
         } else {
@@ -24,7 +24,7 @@ public class ControllerEmpresa {
         }
     }
 
-    public boolean modificarEmpresa(Empresa e) {
+    public boolean modificarEmpresa(Empresa e) throws Exception {
         if (e != null) {
             return servicioEmpresa.modify(e) != false;
         } else {
@@ -32,7 +32,7 @@ public class ControllerEmpresa {
         }
     }
 
-    public Empresa leerEmpresa(Empresa e) {
+    public Empresa leerEmpresa(Empresa e) throws Exception {
         return servicioEmpresa.read(e);
     }
 }

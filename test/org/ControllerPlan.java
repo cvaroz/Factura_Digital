@@ -16,7 +16,7 @@ public class ControllerPlan {
 
     ServicioPlan servicioPlan = new ServicioPlan();
 
-    public boolean insertarPlan(Plan p) {
+    public boolean insertarPlan(Plan p) throws Exception {
         if (p != null) {
             return false;
         } else {
@@ -24,7 +24,7 @@ public class ControllerPlan {
         }
     }
 
-    public boolean modificarPlan(Plan p) {
+    public boolean modificarPlan(Plan p) throws Exception {
         if (p != null) {
             return servicioPlan.modify(p)!=false;
         } else {
@@ -32,14 +32,14 @@ public class ControllerPlan {
         }
     }
 
-    public Plan leerPlan(Plan p) {
+    public Plan leerPlan(Plan p) throws Exception {
         if (p != null) {
             return servicioPlan.read(p);
         }else 
             return null;
     }
     
-    public boolean eliminarPlan(Plan p){
+    public boolean eliminarPlan(Plan p) throws Exception{
         if(p != null) {
             servicioPlan.delete(p);
             return true;

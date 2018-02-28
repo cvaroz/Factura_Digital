@@ -16,7 +16,7 @@ import servicios.ServicioFactura;
 public class ControllerFactura {
     ServicioFactura servicioFactura = new ServicioFactura();
 
-    public boolean insertarFactura(Factura f) {
+    public boolean insertarFactura(Factura f) throws Exception {
         if (f != null) {
             return false;
         } else {
@@ -24,7 +24,7 @@ public class ControllerFactura {
         }
     }
 
-    public boolean modificarFactura(Factura f) {
+    public boolean modificarFactura(Factura f) throws Exception {
         if (f != null) {
             return servicioFactura.modify(f)!=false;
         } else {
@@ -32,7 +32,7 @@ public class ControllerFactura {
         }
     }
 
-    public Factura leerFactura(Factura f) {
+    public Factura leerFactura(Factura f) throws Exception {
         return servicioFactura.read(f);
     }
 }
