@@ -3,36 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
+            <file>file:/Users/fed14/Documents/Factura_Electronica/Factura_Digital/src/java/org/test/FacturaControlador.java</file>
+            <file>file:/Users/fed14/Documents/Factura_Electronica/Factura_Digital/src/java/org/test/RegisterControlador.java</file>
+            <file>file:/Users/fed14/Documents/Factura_Electronica/Factura_Digital/src/java/org/java/EnvioCorreos.java</file>
             <file>file:/Users/fed14/Documents/Factura_Electronica/Factura_Digital/web/index.xhtml</file>
-            <file>file:/Users/fed14/Documents/Factura_Electronica/Factura_Digital/web/facturaCRUD.xhtml</file>
+            <file>file:/Users/fed14/Documents/Factura_Electronica/Factura_Digital/web/homePage.xhtml</file>
             <file>file:/Users/fed14/Documents/Factura_Electronica/Factura_Digital/src/java/org/test/LoginController.java</file>
-=======
-            <file>file:/C:/Users/Jaime/Documents/NetBeansProjects/Proyecto%203/Factura_Digital/test/org/ControllerProducto.java</file>
-            <file>file:/C:/Users/Jaime/Documents/NetBeansProjects/Proyecto%203/Factura_Digital/test/entidades/Item.java</file>
-            <file>file:/C:/Users/Jaime/Documents/NetBeansProjects/Proyecto%203/Factura_Digital/test/org/ControllerListarFactura.java</file>
-            <file>file:/C:/Users/Jaime/Documents/NetBeansProjects/Proyecto%203/Factura_Digital/test/entidades/Empresa.java</file>
-            <file>file:/C:/Users/Jaime/Documents/NetBeansProjects/Proyecto%203/Factura_Digital/test/org/ControllerDocumento.java</file>
-            <file>file:/C:/Users/Jaime/Documents/NetBeansProjects/Proyecto%203/Factura_Digital/test/entidades/Empresausuario.java</file>
-            <file>file:/C:/Users/Jaime/Documents/NetBeansProjects/Proyecto%203/Factura_Digital/test/entidades/Producto.java</file>
-            <file>file:/C:/Users/Jaime/Documents/NetBeansProjects/Proyecto%203/Factura_Digital/test/org/ControllerEmpresa.java</file>
-            <file>file:/C:/Users/Jaime/Documents/NetBeansProjects/Proyecto%203/Factura_Digital/test/org/ControllerEmpresaCliente.java</file>
-            <file>file:/C:/Users/Jaime/Documents/NetBeansProjects/Proyecto%203/Factura_Digital/test/org/ControllerRecibo.java</file>
-            <file>file:/C:/Users/Jaime/Documents/NetBeansProjects/Proyecto%203/Factura_Digital/test/entidades/Plan.java</file>
-            <file>file:/C:/Users/Jaime/Documents/NetBeansProjects/Proyecto%203/Factura_Digital/test/org/ControllerRol.java</file>
-            <file>file:/C:/Users/Jaime/Documents/NetBeansProjects/Proyecto%203/Factura_Digital/test/entidades/Recibo.java</file>
-            <file>file:/C:/Users/Jaime/Documents/NetBeansProjects/Proyecto%203/Factura_Digital/test/org/ControllerFactura.java</file>
-            <file>file:/C:/Users/Jaime/Documents/NetBeansProjects/Proyecto%203/Factura_Digital/test/org/ControllerUsuario.java</file>
-            <file>file:/C:/Users/Jaime/Documents/NetBeansProjects/Proyecto%203/Factura_Digital/test/entidades/Documento.java</file>
-            <file>file:/C:/Users/Jaime/Documents/NetBeansProjects/Proyecto%203/Factura_Digital/test/org/ControllerCliente.java</file>
-            <file>file:/C:/Users/Jaime/Documents/NetBeansProjects/Proyecto%203/Factura_Digital/test/entidades/Cliente.java</file>
-            <file>file:/C:/Users/Jaime/Documents/NetBeansProjects/Proyecto%203/Factura_Digital/test/org/ControllerPlan.java</file>
-            <file>file:/C:/Users/Jaime/Documents/NetBeansProjects/Proyecto%203/Factura_Digital/test/entidades/Rol.java</file>
-            <file>file:/C:/Users/Jaime/Documents/NetBeansProjects/Proyecto%203/Factura_Digital/test/entidades/Factura.java</file>
-            <file>file:/C:/Users/Jaime/Documents/NetBeansProjects/Proyecto%203/Factura_Digital/test/entidades/Empresacliente.java</file>
-            <file>file:/C:/Users/Jaime/Documents/NetBeansProjects/Proyecto%203/Factura_Digital/test/org/ControllerItem.java</file>
-            <file>file:/C:/Users/Jaime/Documents/NetBeansProjects/Proyecto%203/Factura_Digital/test/entidades/Usuario.java</file>
->>>>>>> 3305aee88fc6743dd613df22a037857e8074aed7
         </group>
     </open-files>
 </project-private>
