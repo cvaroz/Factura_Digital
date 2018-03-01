@@ -20,7 +20,8 @@ public class ControllerPlan {
         if (p != null) {
             return false;
         } else {
-            return servicioPlan.modify(p)!=false;
+            servicioPlan.insert(p);
+            return true;
         }
     }
 

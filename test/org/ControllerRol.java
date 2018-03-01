@@ -19,7 +19,8 @@ public class ControllerRol {
         if (r != null) {
             return false;
         } else {
-            return servicioRol.modify(r)!=false;
+            servicioRol.insert(r);
+            return true;
         }
     }
 

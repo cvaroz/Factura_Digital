@@ -19,7 +19,8 @@ public class ControllerProducto {
         if (p != null) {
             return false;
         } else {
-            return servicioProducto.modify(p)!=false;
+            servicioProducto.insert(p);
+            return true;
         }
     }
 
@@ -38,4 +39,11 @@ public class ControllerProducto {
             return null;
     }
     
+    public boolean eliminarProducto(Producto p) throws Exception {
+        if (p != null) {
+            return servicioProducto.delete(p);
+        } else {
+            return false;
+        }
+    }
 }

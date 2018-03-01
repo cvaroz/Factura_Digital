@@ -20,7 +20,8 @@ public class ControllerItem {
         if (i != null) {
             return false;
         } else {
-            return servicioItem.modify(i)!=false;
+            servicioItem.insert(i);
+            return true;
         }
     }
 
@@ -37,5 +38,12 @@ public class ControllerItem {
                 return servicioItem.read(i);
             }else 
                 return null;
+    }
+    public boolean eliminarItem(Item i) throws Exception {
+        if (i != null) {
+            return servicioItem.delete(i);
+        } else {
+            return false;
+        }
     }
 }

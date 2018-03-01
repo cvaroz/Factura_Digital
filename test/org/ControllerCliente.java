@@ -21,18 +21,28 @@ public class ControllerCliente {
         if (c != null) {
             return false;
         } else {
-            return servicioCliente.insert(c)!=false;
+            servicioCliente.insert(c);
+            return true;
         }
     }
 
     public boolean modificarCliente(Cliente c) throws Exception {
-        if(c != null){
-            return servicioCliente.modify(c)!=false;
-        }else
+        if (c != null) {
+            return servicioCliente.modify(c) != false;
+        } else {
             return false;
+        }
     }
-    
-    public Cliente leerCliente(Cliente c) throws Exception{
+
+    public Cliente leerCliente(Cliente c) throws Exception {
         return servicioCliente.read(c);
+    }
+
+    public boolean eliminarCliente(Cliente c) throws Exception {
+        if (c != null) {
+            return servicioCliente.delete(c);
+        } else {
+            return false;
+        }
     }
 }

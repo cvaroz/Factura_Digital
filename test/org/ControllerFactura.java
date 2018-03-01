@@ -20,7 +20,8 @@ public class ControllerFactura {
         if (f != null) {
             return false;
         } else {
-            return servicioFactura.modify(f)!=false;
+            servicioFactura.insert(f);
+            return true;
         }
     }
 

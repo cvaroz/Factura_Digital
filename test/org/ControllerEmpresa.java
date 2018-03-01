@@ -11,16 +11,25 @@ package org;
  */
 import servicios.ServicioEmpresa;
 import entidades.Empresa;
+import entidades.Empresacliente;
+import entidades.Empresausuario;
+import servicios.ServicioEmpresacliente;
+import servicios.ServicioEmpresausuario;
 
 public class ControllerEmpresa {
 
     ServicioEmpresa servicioEmpresa = new ServicioEmpresa();
+    ServicioEmpresausuario sEU = new ServicioEmpresausuario();
+    ServicioEmpresacliente sEC = new ServicioEmpresacliente();
+    Empresausuario eU = new Empresausuario();
+    Empresacliente eC = new Empresacliente();
 
     public boolean insertarEmpresa(Empresa e) throws Exception {
         if (e != null) {
             return false;
         } else {
-            return servicioEmpresa.modify(e) != false;
+            servicioEmpresa.insert(e);
+            return true;
         }
     }
 
@@ -34,5 +43,30 @@ public class ControllerEmpresa {
 
     public Empresa leerEmpresa(Empresa e) throws Exception {
         return servicioEmpresa.read(e);
+    }
+
+    public boolean eliminarEmpresa(Empresa e) throws Exception {
+        if (e != null) {
+            if (servicioEmpresa.list(e) != null) {
+                for (Empresausuario em : sEU.list(eU)) {
+                    if (em.getEmpresa().getId() == e.getId()) {
+                        return false;
+                    }
+                }
+                for (Empresacliente ec : sEC.list(eC)) {
+                    if (ec.getEmpresa().getId() == e.getId()) {
+                        return false;
+                    }
+
+                }
+                e.setEstado("I");
+                servicioEmpresa.modify(e);
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
     }
 }

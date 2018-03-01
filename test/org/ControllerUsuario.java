@@ -19,7 +19,8 @@ public class ControllerUsuario {
         if (u != null) {
             return false;
         } else {
-            return servicioUsuario.modify(u)!=false;
+            servicioUsuario.insert(u);
+            return true;
         }
     }
 

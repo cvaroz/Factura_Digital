@@ -19,7 +19,8 @@ public class ControllerRecibo {
         if (r != null) {
             return false;
         } else {
-            return servicioRecibo.modify(r)!=false;
+            servicioRecibo.insert(r);
+            return true;
         }
     }
 

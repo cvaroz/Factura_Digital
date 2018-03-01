@@ -19,7 +19,8 @@ public class ControllerDocumento {
         if (d != null) {
             return false;
         } else {
-            return servicioDocumento.insert(d)!=false;
+            servicioDocumento.insert(d);
+            return true;
         }
     }
 
