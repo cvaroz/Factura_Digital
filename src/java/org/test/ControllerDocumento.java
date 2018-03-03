@@ -3,15 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org;
+package org.test;
 
 import entidades.Documento;
 import servicios.ServicioDocumento;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
 
-/**
- *
- * @author Li
- */
+@ManagedBean(name = "controllerDocumento")
+@RequestScoped
 public class ControllerDocumento {
     ServicioDocumento servicioDocumento = new ServicioDocumento();
 

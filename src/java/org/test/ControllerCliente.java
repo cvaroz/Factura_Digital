@@ -4,7 +4,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org;
+package org.test;
 
 /**
  *
@@ -12,7 +12,11 @@ package org;
  */
 import entidades.Cliente;
 import servicios.ServicioCliente;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
 
+@ManagedBean(name = "controllerCliente")
+@RequestScoped
 public class ControllerCliente {
 
     ServicioCliente servicioCliente = new ServicioCliente();

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org;
+package org.test;
 
 /**
  *
@@ -13,14 +13,19 @@ import servicios.ServicioEmpresa;
 import entidades.Empresa;
 import entidades.Empresacliente;
 import entidades.Empresausuario;
+import java.util.List;
 import servicios.ServicioEmpresacliente;
-import servicios.ServicioEmpresausuario;
+import servicios.ServicioEmpresausuario;import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
 
+@ManagedBean(name = "controllerEmpresa")
+@RequestScoped
 public class ControllerEmpresa {
 
     ServicioEmpresa servicioEmpresa = new ServicioEmpresa();
     ServicioEmpresausuario sEU = new ServicioEmpresausuario();
     ServicioEmpresacliente sEC = new ServicioEmpresacliente();
+    Empresa empresa = new Empresa();
     Empresausuario eU = new Empresausuario();
     Empresacliente eC = new Empresacliente();
 
@@ -68,5 +73,9 @@ public class ControllerEmpresa {
         } else {
             return false;
         }
+    }
+    
+    public List<Empresa> listaEmpresa() throws Exception{
+        return servicioEmpresa.list(empresa);
     }
 }

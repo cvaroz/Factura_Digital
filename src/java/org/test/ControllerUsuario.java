@@ -3,17 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org;
+package org.test;
 
 import entidades.Factura;
 import entidades.Usuario;
 import servicios.ServicioFactura;
 import servicios.ServicioUsuario;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
 
-/**
- *
- * @author Li
- */
+@ManagedBean(name = "controllerUsuario")
+@SessionScoped
 public class ControllerUsuario {
     ServicioUsuario servicioUsuario = new ServicioUsuario();
     ServicioFactura servicioFactura = new ServicioFactura();
