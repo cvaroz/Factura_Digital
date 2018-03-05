@@ -4,38 +4,47 @@ package org.java;
 import java.util.Properties;
 import javax.activation.DataHandler;
 import javax.activation.FileDataSource;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 
+
+@ManagedBean(name = "envioCorreos")
+@RequestScoped
+
 public class EnvioCorreos{   
+
+
     
     
     
-             public static void main(String[] args) throws MessagingException {
+  /*           public static void main(String[] args) throws MessagingException {
         
                 //  EnvioCorreos EnviarAdjunto = new EnvioCorreos("cvaros15@gmail.com","ucyxqsrpeupffowe","c.varos@hotmail.com", "Prueba","hola", {"C:\\Users\\Usuario\\Desktop\\1.txt","C:\\Users\\Usuario\\Desktop\\2.txt" );
                EnvioCorreos EnviarAdjunto = new EnvioCorreos();
                 EnviarAdjunto.Enviar();
         
-    }
+    }*/
     
     String miCorreo = "proyectosoftware3@gmail.com";
     String miPassword = "adminadmin123";
     String servidorSMTP="smtp.gmail.com";
     String puertoEnvio="587";
-    String[] destinatarios = {"luxofox93@gmail.com" , "proyectosoftware3@gmail.com"};
-    String asunto ="Asunto del mensaje";
-    String cuerpo = "Cuerpo del mensaje";
+    String[] destinatarios={};
+    String asunto  ="Hola";
+    String cuerpo ="PA";
+    //String[] archivoAdjunto;
     String[] archivoAdjunto = {"C:\\Users\\Usuario\\Desktop\\CorreoJava\\1.txt","C:\\Users\\Usuario\\Desktop\\CorreoJava\\2.txt"};
-    String[] destinatarioOculto = {"proyectosoftware3@gmail.com"};
-    String[] destinatarioExtra = {"proyectosoftware3@gmail.com"};
+    String[] destinatarioOculto = {"C.Varos@hotmail.com"};
+    String[] destinatarioExtra = {"C.Varos@hotmail.com"};
     
     public EnvioCorreos(){};
     
-  public EnvioCorreos(String usuario,String pass,String[] dest,String asun,String mens,String[] archivo){
+    public EnvioCorreos(String usuario,String pass,String[] dest,String asun,String mens,String[] archivo){
         miPassword=pass;  
         destinatarios=dest;
         asunto=asun;
@@ -56,7 +65,7 @@ public class EnvioCorreos{
         
      }
   
-    public void Enviar() throws MessagingException
+    public void enviar() throws MessagingException
     {
             Properties props=null;
             props = new Properties();
@@ -135,6 +144,54 @@ public class EnvioCorreos{
     }
         
      
+     
+         public String[] getDestinatarios() {
+        return destinatarios;
+    }
+
+    public void setDestinatarios(String[] destinatarios) {
+        this.destinatarios = destinatarios;
+    }
+
+    public String getAsunto() {
+        return asunto;
+    }
+
+    public void setAsunto(String asunto) {
+        this.asunto = asunto;
+    }
+
+    public String getCuerpo() {
+        return cuerpo;
+    }
+
+    public void setCuerpo(String cuerpo) {
+        this.cuerpo = cuerpo;
+    }
+
+    public String[] getArchivoAdjunto() {
+        return archivoAdjunto;
+    }
+
+    public void setArchivoAdjunto(String[] archivoAdjunto) {
+        this.archivoAdjunto = archivoAdjunto;
+    }
+
+    public String[] getDestinatarioOculto() {
+        return destinatarioOculto;
+    }
+
+    public void setDestinatarioOculto(String[] destinatarioOculto) {
+        this.destinatarioOculto = destinatarioOculto;
+    }
+
+    public String[] getDestinatarioExtra() {
+        return destinatarioExtra;
+    }
+
+    public void setDestinatarioExtra(String[] destinatarioExtra) {
+        this.destinatarioExtra = destinatarioExtra;
+    }
 
      
     }
