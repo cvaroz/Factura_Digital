@@ -11,17 +11,20 @@ package org.test;
  * @author Li
  */
 import entidades.Cliente;
+import entidades.Empresacliente;
+import java.util.List;
 import servicios.ServicioCliente;
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.RequestScoped;
+import javax.faces.bean.SessionScoped;
 
 @ManagedBean(name = "controllerCliente")
-@RequestScoped
+@SessionScoped
 public class ControllerCliente {
 
     ServicioCliente servicioCliente = new ServicioCliente();
-
-    public boolean insertarCliente(Cliente c) throws Exception {
+    Cliente cliente = new Cliente();
+    
+        public boolean insertarCliente(Cliente c) throws Exception {
         if (c != null) {
             return false;
         } else {

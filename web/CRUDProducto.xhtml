@@ -1,7 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <meta charset="utf-8"></meta>
         <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
@@ -262,6 +263,15 @@
         </script>
     </h:head>
     <h:body>
+        <script> 
+            function listaNula(form) {
+                producto = productoTable.value;
+                if (producto === null) {
+                    alert("No existen productos");
+                }
+            }
+
+        </script>
         <div class="container">
             <div class="table-wrapper">
                 <div class="table-title">
@@ -274,76 +284,44 @@
                         </div>
                     </div>
                 </div>
-                <table class="table table-striped table-hover">
-                    <thead>
-                        <tr>
-                            <th>Id</th>
-                            <th>Nombre</th>
-                            <th>Empresa</th>
-                            <th>Precio</th>
-                            <th>Impuesto</th>
-                            <th>Descripcion</th>
-                            <th>Acción</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
 
-                            <td>FacturaA</td>
-                            <td>300</td>
-                            <td>320</td>
-                            <td>80</td>
-                            <td>
-                                <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                                <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-                            </td>
-                        </tr>
-                        <tr>
-
-                            <td>FacturaB</td>
-                            <td>300</td>
-                            <td>320</td>
-                            <td>80</td>
-                            <td>
-                                <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                                <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-                            </td>
-                        </tr>
-                        <tr>
-
-                            <td>FacturaC</td>
-                            <td>600</td>
-                            <td>550</td>
-                            <td>50</td>
-                            <td>
+                <tbody>
+                    <h:form id="productoForm">
+                        <h:dataTable id="productoTable" value="#{controllerProducto.listaProducto()}" var="producto" class="table table-striped table-hover table-bordered tableUpdated">
+                            <h:column>
+                                <f:facet name="header">Id</f:facet>
+                                <h:outputText value="#{producto.id}" />
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">Nombre</f:facet>
+                                <h:outputText value="#{producto.nombre}" />
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">Empresa</f:facet>
+                                <h:outputText value="#{producto.empresa.nombre}" />
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">Precio</f:facet>
+                                <h:outputText value="#{producto.precio}" />
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">Impuesto</f:facet>
+                                <h:outputText value="#{producto.impuestoVenta}" />
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">Descripcion</f:facet>
+                                <h:outputText value="#{producto.descripcion}" />
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">Accion</f:facet>
                                 <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Editar">&#xE254;</i></a>
-                                <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Borrar">&#xE872;</i></a>
-                            </td>
-                        </tr>
-                        <tr>
+                                <a href="#{controllerProducto.eliminarProducto(producto)}" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Eliminar">&#xE872;</i></a>
+                            </h:column>
 
-                            <td>FacturaD</td>
-                            <td>800</td>
-                            <td>650</td>
-                            <td>150</td>
-                            <td>
-                                <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                                <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-                            </td>
-                        </tr>					
-                        <tr>
+                        </h:dataTable>
 
-                            <td>FacturaE</td>
-                            <td>250</td>
-                            <td>230</td>
-                            <td>20</td>
-                            <td>
-                                <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                                <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-                            </td>
-                        </tr> 
-                    </tbody>
-                </table>
+                    </h:form>
+                </tbody>
                 <div class="clearfix">
                     <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
                     <ul class="pagination">

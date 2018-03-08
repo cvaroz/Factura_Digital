@@ -6,6 +6,7 @@
 package org.test;
 
 import entidades.Factura;
+import java.util.List;
 import servicios.ServicioFactura;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
@@ -14,6 +15,7 @@ import javax.faces.bean.RequestScoped;
 @RequestScoped
 public class ControllerFactura {
     ServicioFactura servicioFactura = new ServicioFactura();
+    Factura factura = new Factura();
 
     public boolean insertarFactura(Factura f) throws Exception {
         if (f != null) {
@@ -34,5 +36,9 @@ public class ControllerFactura {
 
     public Factura leerFactura(Factura f) throws Exception {
         return servicioFactura.read(f);
+    }
+    
+    public List<Factura> listaEmpresa() throws Exception{
+        return servicioFactura.list(factura);
     }
 }

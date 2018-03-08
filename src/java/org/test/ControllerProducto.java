@@ -6,6 +6,7 @@
 package org.test;
 
 import entidades.Producto;
+import java.util.List;
 import servicios.ServicioProducto;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
@@ -14,6 +15,7 @@ import javax.faces.bean.RequestScoped;
 @RequestScoped
 public class ControllerProducto {
     ServicioProducto servicioProducto = new ServicioProducto();
+    Producto producto = new Producto();
 
     public boolean insertarProducto(Producto p) throws Exception {
         if (p != null) {
@@ -45,5 +47,9 @@ public class ControllerProducto {
         } else {
             return false;
         }
+    }
+    
+    public List<Producto> listaProducto() throws Exception{
+        return servicioProducto.list(producto);
     }
 }
