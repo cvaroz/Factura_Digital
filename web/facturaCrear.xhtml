@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:form>
+        Hello from Jamaica
+      
+        
+ <!--      <ui:repeat value="#{envioCorreos.destinatarios}" var="a" varStatus="loop">
+    <h:inputText value="#{envioCorreos.destinatarios[loop.index]}" />
+</ui:repeat>              
+        <ui:repeat value="#{envioCorreos.archivoAdjunto}" var="b" varStatus="loop">
+            <h:inputText value="#{envioCorreos.archivoAdjunto[loop.index]}" />
+</ui:repeat>      
+      -->
+      
+ <!--      
+      <h:selectOneMenu value = "#{controllerUsuario.leerUsuario(u)}"> 
+          <f:selectItem itemValue = "#{controllerUsuario.leerUsuario(u).correo}" itemLabel = "#{controllerUsuario.leerUsuario(u).nombreUsuario}" /> 
+   <f:selectItem itemValue = "2" itemLabel = "Item 2" /> 
+</h:selectOneMenu> 
+-->
+
+
+<input id="emailAddress" type="email" placeholder="sophie@example.com" value="#{envioCorreos.destinatarios}" multiple=""/>
+<!--
+<input id="archivo" type="email" placeholder="sophie@example.com" value="#{envioCorreos.archivoAdjunto}" multiple=""/>
+-->
+
+<!--
+<form method="post" enctype="multipart/form-data">
+ <div>
+   <label for="file">Choose file to upload</label>
+   <input type="file" id="file" name="file"  multiple=""/>
+ </div>
+</form>
+-->
+
+
+<!--
+<input type="text" id="text" name="text" value="#{envioCorreos.archivoAdjunto}" multiple=""/>
+ -->
+ 
+ 
+        <h:commandButton id="cBtnEnviarCorreo" value="Enviar" action="#{envioCorreos.enviar()}" ></h:commandButton>            
+        
+        </h:form>
+    </h:body>
+</html>
+
