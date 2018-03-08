@@ -54,12 +54,12 @@ public class ControllerEmpresa {
         if (e != null) {
             if (servicioEmpresa.list(e) != null) {
                 for (Empresausuario em : sEU.list(eU)) {
-                    if (em.getEmpresa().getId() == e.getId()) {
+                    if (em.getEmpresa().getIdEmpresa()== e.getIdEmpresa()) {
                         return false;
                     }
                 }
                 for (Empresacliente ec : sEC.list(eC)) {
-                    if (ec.getEmpresa().getId() == e.getId()) {
+                    if (ec.getEmpresa().getIdEmpresa()== e.getIdEmpresa()) {
                         return false;
                     }
 
